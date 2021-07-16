@@ -2,11 +2,15 @@ package ghozti.tictactoe.ui;
 
 public class Interface {
 
-    private String[][] gamePad = {
+    private static String[][] gamePad = {
             {"","",""},
             {"","",""},
             {"","",""}
     };
+
+    public static String[][] getGamePad(){
+        return gamePad;
+    }
 
     public void updateUI(int xMoveCoor, int yMoveCoor, String player){
         if(!gamePad[xMoveCoor][yMoveCoor].equals(" ")){
