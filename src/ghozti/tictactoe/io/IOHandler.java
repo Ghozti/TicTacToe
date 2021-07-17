@@ -11,4 +11,15 @@ public class IOHandler {
         }
         return Constants.ErrorCodes.INVALID_MOVE;
     }
+
+    protected int[] convertStrToMove(String move){
+        int[] int_split = new int[1];
+
+        String[] move_split = move.split(",");
+
+        int_split[0] = Integer.parseInt(move_split[0]);
+        int_split[1] = Integer.parseInt(move_split[1]);
+
+        return int_split;
+    }
 }
