@@ -40,4 +40,12 @@ public class Interface {
             System.out.println("INVALID MOVE, YOUR TURN HAS EXPIRED");
         }
     }
+
+    public static void resetTable(){
+        gamePad = new String[][]{
+                {"","",""},
+                {"","",""},
+                {"","",""}
+        };
+    }
 }
