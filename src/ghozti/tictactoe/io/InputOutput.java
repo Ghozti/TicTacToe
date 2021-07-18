@@ -8,11 +8,10 @@ public class InputOutput {
         Scanner scanner = new Scanner(System.in);
 
         String moveStr;
-        int[] moves = new int[1];
 
         System.out.println("Your move: ");
         moveStr = scanner.nextLine();
 
-        return moves;
+        return playerMove(moveStr);
     }
 }

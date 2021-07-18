@@ -1,5 +1,8 @@
 package ghozti.tictactoe.ui;
 
+import ghozti.tictactoe.constants.Constants;
+import ghozti.tictactoe.io.IOHandler;
+
 public class Interface {
 
     private static String[][] gamePad = {
@@ -27,6 +30,14 @@ public class Interface {
                 row.append(str);
             }
             System.out.println(row.toString());
+        }
+    }
+
+    public static void addToGamePad(String move, int[] coordinates){
+        if(new IOHandler().verifyPlayerMove(coordinates).equals(Constants.ErrorCodes.A_OK)) {
+            gamePad[coordinates[0]][coordinates[1]] = move;
+        }else {
+            System.out.println("INVALID MOVE, YOUR TURN HAS EXPIRED");
         }
     }
 }
