@@ -5,6 +5,7 @@ import ghozti.tictactoe.ui.Interface;
 
 public class IOHandler {
 
+    //will return an error code based on the desired place where the player wants to place the x or o at
     public String verifyPlayerMove(int[] moves){
         if (!Interface.getGamePad()[moves[0]][moves[1]].equals(" ")){
             return Constants.ErrorCodes.A_OK;
@@ -12,7 +13,8 @@ public class IOHandler {
         return Constants.ErrorCodes.INVALID_MOVE;
     }
 
-    protected int[] convertStrToMove(String move){
+    //converts a string into coordinates
+    public int[] convertStrToMove(String move){
         int[] int_split = new int[1];
 
         String[] move_split = move.split(",");
