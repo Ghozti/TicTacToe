@@ -7,9 +7,9 @@ public class Interface {
 
     //game pad multid array
     private static String[][] gamePad = {
-            {"","",""},
-            {"","",""},
-            {"","",""}
+            {"","|","","|",""},
+            {"","|","","|",""},
+            {"","|","","|",""}
     };
 
     //returns gamepad
@@ -18,7 +18,7 @@ public class Interface {
     }
 
     //displays the game pad
-    private static void displayUI(){
+    public static void displayUI(){
         for(String[] arr  : gamePad){
             StringBuilder row = new StringBuilder();
             for(String str : arr){

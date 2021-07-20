@@ -1,18 +1,21 @@
 package ghozti.tictactoe.game;
 
+import ghozti.tictactoe.io.InputOutput;
 import ghozti.tictactoe.players.AI;
 import ghozti.tictactoe.players.Player;
+import ghozti.tictactoe.ui.Interface;
 
 import java.util.Scanner;
 
 public class Game {
 
     public Game(){
-
+        startGame();
     }
 
     private static Player player;
     private static AI ai;
+    private static boolean win = false;
 
     public static Player getPlayer(){
         return player;
@@ -20,6 +23,10 @@ public class Game {
 
     public static AI getAI(){
         return ai;
+    }
+
+    public static boolean getWin(){
+        return win;
     }
 
     private void startGame(){
@@ -36,6 +43,13 @@ public class Game {
             ai = new AI("O");
         }else {
             ai = new AI("X");
+        }
+
+        InputOutput inputOutput = new InputOutput();
+
+        while(!win){
+            Interface.displayUI();
+            inputOutput.playerMove(player.getMove());
         }
     }
 }
