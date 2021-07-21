@@ -15,7 +15,7 @@ public class IOHandler {
 
     //converts a string into coordinates
     public int[] convertStrToMove(String move){
-        int[] int_split = new int[1];
+        int[] int_split = new int[2];
 
         String[] move_split = move.split(",");
 

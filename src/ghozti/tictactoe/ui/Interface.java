@@ -7,11 +7,11 @@ public class Interface {
 
     //game pad multid array
     private static String[][] gamePad = {
-            {"      |","      ","|      "},
+            {"      ","|","      ","|      "},
             {"------|","------","|------"},
-            {"      |","      ","|      "},
+            {"      ","|","      ","|      "},
             {"------|","------","|------"},
-            {"      |","      ","|      "},
+            {"      ","|","      ","|      "}
     };
 
     //returns gamepad
@@ -33,7 +33,7 @@ public class Interface {
     //allows one to add an x or o to the game pad. also verifies wether the action can be made or not
     public static void addToGamePad(String move, int[] coordinates){
         if(new IOHandler().verifyPlayerMove(coordinates).equals(Constants.ErrorCodes.A_OK)) {
-            gamePad[coordinates[0]][coordinates[1]] = move;
+            gamePad[coordinates[0]][coordinates[1]] = "  " + move + "  ";
             displayUI();
         }else {
             System.out.println("INVALID MOVE, YOUR TURN HAS EXPIRED");
@@ -44,9 +44,11 @@ public class Interface {
     //resets thr gamepad to a default blank one
     public static void resetTable(){
         gamePad = new String[][]{
-                {"","",""},
-                {"","",""},
-                {"","",""}
+                {"      ","|","      ","|      "},
+                {"------|","------","|------"},
+                {"      ","|","      ","|      "},
+                {"------|","------","|------"},
+                {"      ","|","      ","|      "}
         };
     }
 }
