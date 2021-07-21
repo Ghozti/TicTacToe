@@ -29,6 +29,8 @@ public class Game {
         return win;
     }
 
+    public static void setWin(Boolean win){Game.win = win;}
+
     private void startGame(){
         System.out.println("Welcome to tic tac toe!\n" +
                 "please enter what you want to use:\n" +

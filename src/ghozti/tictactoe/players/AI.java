@@ -1,5 +1,7 @@
 package ghozti.tictactoe.players;
 
+import ghozti.tictactoe.ui.Interface;
+
 public class AI {
 
     private String move;
@@ -17,6 +19,8 @@ public class AI {
     }
 
     public void calculateOutcomes(){
+        var table = Interface.getGamePad();
+
 
     }
 
