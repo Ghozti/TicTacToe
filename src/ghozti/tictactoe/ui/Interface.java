@@ -74,7 +74,7 @@ public class Interface {
         }
     }
 
-    public static boolean check_win(){
+    public static void check_win(){
 
         String winning_str = "XXX";
         String winning_str_AI = "OOO";
@@ -115,5 +115,14 @@ public class Interface {
 
         /*DIAGONAL************************************************************************************************/
 
+        if ((gamePad[0][0] + gamePad[1][1] + gamePad[2][2]).equals(winning_str) ||
+                (gamePad[0][0] + gamePad[1][1] + gamePad[2][2]).equals(winning_str_AI)){
+            Game.setWin(true);
+        }
+
+        if ((gamePad[1][0] + gamePad[1][1] + gamePad[1][2]).equals(winning_str) ||
+                (gamePad[1][0] + gamePad[1][1] + gamePad[1][2]).equals(winning_str_AI)){
+            Game.setWin(true);
+        }
     }
 }
