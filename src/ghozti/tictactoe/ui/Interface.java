@@ -80,35 +80,41 @@ public class Interface {
 
         /*VERTICAL************************************************************************************************/
 
-        if ((gamePad[0][0] + gamePad[1][0] + gamePad[2][0]).trim().equals(winning_str) ||
-                (gamePad[0][0] + gamePad[1][0] + gamePad[2][0]).equals(winning_str_AI)){
+        if ((gamePad[0][0] + gamePad[2][0] + gamePad[4][0]).trim().equals(winning_str) ||
+                (gamePad[0][0] + gamePad[2][0] + gamePad[4][0]).equals(winning_str_AI)){
+            System.out.println("GAME!");
             Game.setWin(true);
         }
 
-        if ((gamePad[0][1] + gamePad[1][1] + gamePad[2][1]).trim().equals(winning_str) ||
-                (gamePad[0][1] + gamePad[1][1] + gamePad[2][1]).trim().equals(winning_str_AI)){
+        if ((gamePad[0][2] + gamePad[2][2] + gamePad[4][2]).trim().equals(winning_str) ||
+                (gamePad[0][2] + gamePad[2][2] + gamePad[4][2]).equals(winning_str_AI)){
+            System.out.println("GAME!");
             Game.setWin(true);
         }
 
-        if ((gamePad[0][2] + gamePad[1][2] + gamePad[2][2]).trim().equals(winning_str) ||
-                (gamePad[0][2] + gamePad[1][2] + gamePad[2][2]).trim().equals(winning_str_AI)){
+        if ((gamePad[0][4] + gamePad[2][4] + gamePad[4][4]).trim().equals(winning_str) ||
+                (gamePad[0][4] + gamePad[2][4] + gamePad[4][4]).equals(winning_str_AI)){
+            System.out.println("GAME!");
             Game.setWin(true);
         }
 
         /*HORIZONTAL************************************************************************************************/
 
-        if ((gamePad[0][0] + gamePad[0][1] + gamePad[0][2]).trim().equals(winning_str) ||
-                (gamePad[0][0] + gamePad[0][1] + gamePad[0][2]).trim().equals(winning_str_AI)){
+        if ((gamePad[0][0] + gamePad[0][2] + gamePad[0][4]).trim().equals(winning_str) ||
+                (gamePad[0][0] + gamePad[0][2] + gamePad[0][4]).trim().equals(winning_str_AI)){
+            System.out.println("GAME!");
             Game.setWin(true);
         }
 
-        if ((gamePad[1][0] + gamePad[1][1] + gamePad[1][2]).trim().equals(winning_str) ||
-                (gamePad[1][0] + gamePad[1][1] + gamePad[1][2]).trim().equals(winning_str_AI)){
+        if ((gamePad[2][0] + gamePad[2][2] + gamePad[2][4]).trim().equals(winning_str) ||
+                (gamePad[2][0] + gamePad[2][2] + gamePad[2][4]).trim().equals(winning_str_AI)){
+            System.out.println("GAME!");
             Game.setWin(true);
         }
 
-        if ((gamePad[2][0] + gamePad[2][1] + gamePad[2][2]).trim().equals(winning_str) ||
-                (gamePad[2][0] + gamePad[2][1] + gamePad[2][2]).trim().equals(winning_str_AI)){
+        if ((gamePad[4][0] + gamePad[4][2] + gamePad[4][4]).trim().equals(winning_str) ||
+                (gamePad[4][0] + gamePad[4][2] + gamePad[4][4]).trim().equals(winning_str_AI)){
+            System.out.println("GAME!");
             Game.setWin(true);
         }
 
