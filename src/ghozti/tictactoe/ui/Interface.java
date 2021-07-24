@@ -115,13 +115,13 @@ public class Interface {
 
         /*DIAGONAL************************************************************************************************/
 
-        if ((gamePad[0][0] + gamePad[1][1] + gamePad[2][2]).equals(winning_str) ||
-                (gamePad[0][0] + gamePad[1][1] + gamePad[2][2]).equals(winning_str_AI)){
+        if ((gamePad[0][0] + gamePad[2][2] + gamePad[4][4]).equals(winning_str) ||
+                (gamePad[0][0] + gamePad[2][2] + gamePad[4][4]).equals(winning_str_AI)){
             Game.setWin(true);
         }
 
-        if ((gamePad[1][0] + gamePad[1][1] + gamePad[1][2]).equals(winning_str) ||
-                (gamePad[1][0] + gamePad[1][1] + gamePad[1][2]).equals(winning_str_AI)){
+        if ((gamePad[0][4] + gamePad[2][1] + gamePad[4][0]).equals(winning_str) ||
+                (gamePad[1][0] + gamePad[2][1] + gamePad[4][0]).equals(winning_str_AI)){
             Game.setWin(true);
         }
     }
