@@ -52,6 +52,7 @@ public class Game {
         while(!win){
             Interface.displayUI();
             inputOutput.playerMove(player.getMove());
+            Interface.check_win();
         }
     }
 }

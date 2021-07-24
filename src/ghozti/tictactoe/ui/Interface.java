@@ -39,11 +39,10 @@ public class Interface {
     public static void addToGamePad(String move, int[] coordinates){
         if(new IOHandler().verifyPlayerMove(coordinates).equals(Constants.ErrorCodes.A_OK)) {
             gamePad[coordinates[0]][coordinates[1]] = "  " + move + "  ";
-            displayUI();
         }else {
             System.out.println("INVALID MOVE, YOUR TURN HAS EXPIRED");
-            displayUI();
         }
+        displayUI();
     }
 
     //resets thr gamepad to a default blank one
@@ -76,52 +75,53 @@ public class Interface {
 
     public static void check_win(){
 
-        String winning_str = "XXX";
-        String winning_str_AI = "OOO";
+        String winning_str = "X    X    X";
+        String winning_str_AI = "O    O    O";
 
         /*VERTICAL************************************************************************************************/
 
-        if ((gamePad[0][0] + gamePad[1][0] + gamePad[2][0]).equals(winning_str) ||
+        if ((gamePad[0][0] + gamePad[1][0] + gamePad[2][0]).trim().equals(winning_str) ||
                 (gamePad[0][0] + gamePad[1][0] + gamePad[2][0]).equals(winning_str_AI)){
             Game.setWin(true);
         }
 
-        if ((gamePad[0][1] + gamePad[1][1] + gamePad[2][1]).equals(winning_str) ||
-                (gamePad[0][1] + gamePad[1][1] + gamePad[2][1]).equals(winning_str_AI)){
+        if ((gamePad[0][1] + gamePad[1][1] + gamePad[2][1]).trim().equals(winning_str) ||
+                (gamePad[0][1] + gamePad[1][1] + gamePad[2][1]).trim().equals(winning_str_AI)){
             Game.setWin(true);
         }
 
-        if ((gamePad[0][2] + gamePad[1][2] + gamePad[2][2]).equals(winning_str) ||
-                (gamePad[0][2] + gamePad[1][2] + gamePad[2][2]).equals(winning_str_AI)){
+        if ((gamePad[0][2] + gamePad[1][2] + gamePad[2][2]).trim().equals(winning_str) ||
+                (gamePad[0][2] + gamePad[1][2] + gamePad[2][2]).trim().equals(winning_str_AI)){
             Game.setWin(true);
         }
 
         /*HORIZONTAL************************************************************************************************/
 
-        if ((gamePad[0][0] + gamePad[0][1] + gamePad[0][2]).equals(winning_str) ||
-                (gamePad[0][0] + gamePad[0][1] + gamePad[0][2]).equals(winning_str_AI)){
+        if ((gamePad[0][0] + gamePad[0][1] + gamePad[0][2]).trim().equals(winning_str) ||
+                (gamePad[0][0] + gamePad[0][1] + gamePad[0][2]).trim().equals(winning_str_AI)){
             Game.setWin(true);
         }
 
-        if ((gamePad[1][0] + gamePad[1][1] + gamePad[1][2]).equals(winning_str) ||
-                (gamePad[1][0] + gamePad[1][1] + gamePad[1][2]).equals(winning_str_AI)){
+        if ((gamePad[1][0] + gamePad[1][1] + gamePad[1][2]).trim().equals(winning_str) ||
+                (gamePad[1][0] + gamePad[1][1] + gamePad[1][2]).trim().equals(winning_str_AI)){
             Game.setWin(true);
         }
 
-        if ((gamePad[2][0] + gamePad[2][1] + gamePad[2][2]).equals(winning_str) ||
-                (gamePad[2][0] + gamePad[2][1] + gamePad[2][2]).equals(winning_str_AI)){
+        if ((gamePad[2][0] + gamePad[2][1] + gamePad[2][2]).trim().equals(winning_str) ||
+                (gamePad[2][0] + gamePad[2][1] + gamePad[2][2]).trim().equals(winning_str_AI)){
             Game.setWin(true);
         }
 
         /*DIAGONAL************************************************************************************************/
-
-        if ((gamePad[0][0] + gamePad[2][2] + gamePad[4][4]).equals(winning_str) ||
-                (gamePad[0][0] + gamePad[2][2] + gamePad[4][4]).equals(winning_str_AI)){
+        if ((gamePad[0][0] + gamePad[2][2] + gamePad[4][4]).trim().equals(winning_str) ||
+                (gamePad[0][0] + gamePad[2][2] + gamePad[4][4]).trim().equals(winning_str_AI)){
+            System.out.println("GAME!");
             Game.setWin(true);
         }
 
-        if ((gamePad[0][4] + gamePad[2][1] + gamePad[4][0]).equals(winning_str) ||
-                (gamePad[1][0] + gamePad[2][1] + gamePad[4][0]).equals(winning_str_AI)){
+        if ((gamePad[0][4] + gamePad[2][2] + gamePad[4][0]).trim().equals(winning_str) ||
+                (gamePad[0][4] + gamePad[2][2] + gamePad[4][0]).trim().equals(winning_str_AI)){
+            System.out.println("GAME!");
             Game.setWin(true);
         }
     }
