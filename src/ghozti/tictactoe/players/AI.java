@@ -16,13 +16,19 @@ public class AI {
 
     public void makeMove(){
         //should make a move based on all possible outcomes with the current table status
+
+        /*
+        should check for 2 things:
+        the current board status and the player's moves.
+        It should try to counter the player by blocking out their moves while at the same time trying to win on it's own.
+         */
     }
 
-    public int[] calculateOutcomes(){
-        var table = Interface.getGamePad();
+    private void analyzePlayer(){
 
-        return new int[] {};//should return the coordinates of the best move possible3
     }
 
+    private void analyzeField(){
 
+    }
 }
