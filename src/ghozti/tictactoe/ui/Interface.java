@@ -56,6 +56,10 @@ public class Interface {
         };
     }
 
+    public static boolean spotAvaliable(int x, int y){
+        return gamePad[y][x].equals("      ");
+    }
+
     private static void displayAvailableMoves(){
 
         ArrayList<String> available_spots = new ArrayList<>();
