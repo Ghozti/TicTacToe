@@ -1,5 +1,6 @@
 package ghozti.tictactoe.players;
 
+import ghozti.tictactoe.io.InputOutput;
 import ghozti.tictactoe.ui.Interface;
 
 public class AI {
@@ -29,6 +30,9 @@ public class AI {
     }
 
     private void analyzeField(){
-
+        //checks to see if the middle slot is taken, if not it will take it.
+        if(Interface.getGamePad()[2][2].equals("      ")){
+            Interface.addToGamePad(getMove(),new int[]{2,2});
+        }
     }
 }
