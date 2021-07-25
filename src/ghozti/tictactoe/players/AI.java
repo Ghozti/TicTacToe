@@ -15,6 +15,16 @@ public class AI {
         return move;
     }
 
+    int[] lastMove;
+
+    private void setLastMove(int[] in){
+        lastMove = in;
+    }
+
+    private int[] getLastMove(){
+        return lastMove;
+    }
+
     public void makeMove(){
         //should make a move based on all possible outcomes with the current table status
 

@@ -57,6 +57,15 @@ public class Interface {
     }
 
     public static boolean spotAvaliable(int x, int y){
+
+        try {
+            if(gamePad[y][x].equals("      ")){
+                return true;
+            }
+        }catch (IndexOutOfBoundsException e){
+            return false;
+        }
+
         return gamePad[y][x].equals("      ");
     }
 
