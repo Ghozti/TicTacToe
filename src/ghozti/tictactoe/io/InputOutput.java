@@ -1,10 +1,18 @@
 package ghozti.tictactoe.io;
 
+import ghozti.tictactoe.players.Player;
 import ghozti.tictactoe.ui.Interface;
 
 import java.util.Scanner;
 
 public class InputOutput {
+
+    String playerMove, aiMove;
+
+    public InputOutput(String playerMove,String aiMove){
+        this.playerMove = playerMove;
+        this.aiMove = aiMove;
+    }
 
     public void playerMove(String moveType){
         Scanner scanner = new Scanner(System.in);
@@ -17,6 +25,8 @@ public class InputOutput {
 
         int[] moves = handler.convertStrToMove(moveStr);
 
-        Interface.addToGamePad("X",moves);
+        Player.setLastPlayerMove(moves);
+
+        Interface.addToGamePad(playerMove,moves);
     }
 }

@@ -47,7 +47,7 @@ public class Game {
             ai = new AI("X");
         }
 
-        InputOutput inputOutput = new InputOutput();
+        InputOutput inputOutput = new InputOutput(player.getMove(),ai.getMove());
 
         while(!win){
             Interface.displayUI();
